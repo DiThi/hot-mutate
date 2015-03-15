@@ -1,0 +1,15 @@
+{
+  "name": "hot-mutate",
+  "version": "0.0.1",
+  "description": "Mutates loaded modules when using hot module reloading to avoid writing reload logic",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DiThi/hot-mutate.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alberto Torres",
+  "license": "ISC"
+}
