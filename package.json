@@ -1,6 +1,6 @@
 {
   "name": "hot-mutate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mutates loaded modules when using hot module reloading to avoid writing reload logic",
   "repository": {
     "type": "git",

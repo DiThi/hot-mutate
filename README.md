@@ -7,6 +7,8 @@ This module allows you to use Webpack's [hot module replacement](https://webpack
 to reload code, but without having to handle dependencies or anything.
 It mutates all instances of the module and it wraps the functions and methods.
 
+As a simple example of usage look [here](https://github.com/DiThi/boilerplate).
+
 Installing
 ---
 
@@ -17,7 +19,7 @@ Assuming you're using Webpack and HMR already.
 Usage
 ---
 
-After `module.exports` is set, put this:
+After `exports` is set, put this:
 
 ```javascript
     require('hot-mutate')(module)
@@ -36,8 +38,8 @@ patched by hot-mutate. Therefore this won't update if you modify `hello`:
     
     window.addEventListener('click', hello);
     
-    module.exports = {hello: hello}
-    require('hot-mutate')(module)
+    module.exports = {hello: hello};
+    require('hot-mutate')(module);
 ```
 
 Instead, have an init function which is called at the very end, and if it's not
@@ -52,7 +54,7 @@ a method, remember to take the function from `exports`:
         window.addEventListener('click', module.exports.hello);
     }
     
-    module.exports = {hello: hello}
-    require('hot-mutate')(module)
-    init()
+    module.exports = {hello: hello};
+    require('hot-mutate')(module);
+    init();
 ```
